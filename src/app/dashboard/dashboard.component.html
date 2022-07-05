@@ -1,0 +1,14 @@
+<section class="user-list">
+  <span>Filter Users: </span>
+  <input type="text" [(ngModel)]="userFilter" (ngModelChange)="filterUsers()">
+  <div>
+    <div *ngFor="let user of filteredUsersList"  (click)="showUserDetails()">
+      <!-- <span>{{ user.id }}</span> -->
+      <img [src]="user.avatar">
+      <span>
+        {{ user.name }}
+      </span>
+    </div>
+  </div>
+
+</section>

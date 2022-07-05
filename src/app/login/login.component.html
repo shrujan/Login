@@ -1,0 +1,10 @@
+<div class="login-component">
+  <h3> Login </h3>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <input type="text" formControlName="userName" placeholder="Enter User Name" required>
+    <mat-error *ngIf="loginForm.get('userName').dirty && loginForm.get('userName').invalid">Enter User Name</mat-error>
+    <input type="password" formControlName="password" placeholder="Enter Password">
+    <mat-error *ngIf="loginForm.get('password').dirty && loginForm.get('password').invalid">Enter Password</mat-error>
+    <input type="submit" value="Login">
+  </form>
+</div>
